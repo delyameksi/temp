@@ -1,0 +1,35 @@
+repos:
+  - repo: local
+    hooks:
+      # Prettier
+      - id: prettier
+        name: prettier
+        entry: npx prettier --write --ignore-unknown
+        language: system
+        types: [text]
+        stages: [pre-commit]
+
+      # ESLint
+      - id: eslint
+        name: eslint
+        entry: npx eslint --fix
+        language: system
+        files: \.(js|mjs|cjs|jsx|ts)$
+        types: [file]
+        stages: [pre-commit]
+
+      # Gitleaks
+      - id: gitleaks
+        name: gitleaks
+        entry: gitleaks git --staged --redact --no-banner
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-commit]
+
+      # Commitlint
+      - id: commitlint
+        name: commitlint
+        entry: npx commitlint --edit
+        language: system
+        stages: [commit-msg]

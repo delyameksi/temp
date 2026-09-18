@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "src/**/*",
+    "src/static/js/babel.min.js",
+    "src/static/js/react-dom.production.min.js",
+    "src/static/js/react.production.min.js"
+  ],
+  "exclude": ["src/**/*.test.ts"]
+}

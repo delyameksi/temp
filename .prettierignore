@@ -1,0 +1,15 @@
+# Dependencies and build output
+node_modules/
+dist/
+
+# Local runtime data (SQLite database)
+data/
+
+# Generated
+package-lock.json
+
+# Vendored third-party assets
+*.min.js
+*.min.css
+src/static/js/react-bootstrap.js
+src/static/css/font-awesome/

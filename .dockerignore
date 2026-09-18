@@ -1,0 +1,10 @@
+# Exclude everything by default, whitelist what's necessary to the image
+*
+
+!package.json
+!package-lock.json
+!tsconfig.json
+!src/
+
+src/**/*.log
+src/**/.DS_Store
